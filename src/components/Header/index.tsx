@@ -12,11 +12,11 @@ const Header: React.FC = () => {
 
       <IconContainer>
         <IconButton space>
-          <Entypo name="chat" size={30} />
-        </IconButton>
-        <IconButton>
           <Cart name="cart-outline" size={30} />
+        </IconButton>
 
+        <IconButton>
+          <Entypo name="chat" size={30} />
         </IconButton>
       </IconContainer>
     </Container>

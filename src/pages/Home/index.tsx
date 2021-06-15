@@ -1,8 +1,8 @@
 import React from 'react';
-import { Header, Stories } from '../../components';
+import { Header, Stories, Title, InputForm } from '../../components';
 import surfImage from '../../assets/images/surf1.jpeg'
 
-import { Container } from './styles';
+import { Container, Content } from './styles';
 
 const Home: React.FC = () => {
   const data = [
@@ -38,10 +38,15 @@ const Home: React.FC = () => {
     }
   ]
 
+
   return (
     <Container>
       <Header />
       <Stories data={data} />
+      <Content>
+        <Title title="Onde você" titleBold="surfou hoje?" />
+        <InputForm />
+      </Content>
     </Container>
   );
 }

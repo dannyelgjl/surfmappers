@@ -5,7 +5,7 @@ import { s, vs, ms, mvs } from 'react-native-size-matters';
 
 export const Container = styled.View`
   width: ${mvs(100)}%;
-  padding: ${mvs(14)}px ${mvs(4)}px ${mvs(20)}px ${mvs(4)}px;
+  padding: ${mvs(14)}px 0 ${mvs(20)}px ${mvs(14)}px;
   border-bottom-color: #ccc;
   border-bottom-width: ${mvs(1)}px;
 `
