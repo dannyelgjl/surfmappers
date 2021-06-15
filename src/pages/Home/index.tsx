@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
-import Stories from '../../components/Stories';
+import { Header, Stories } from '../../components';
 import surfImage from '../../assets/images/surf1.jpeg'
 
 import { Container } from './styles';
@@ -10,7 +9,7 @@ const Home: React.FC = () => {
     {
       id: 1,
       image: surfImage,
-      name: 'daniel',
+      name: 'danielgjl'
     },
     {
       id: 2,
@@ -41,6 +40,7 @@ const Home: React.FC = () => {
 
   return (
     <Container>
+      <Header />
       <Stories data={data} />
     </Container>
   );
