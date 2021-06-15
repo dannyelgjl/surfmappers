@@ -18,11 +18,12 @@ const Stories: React.FC<Data> = ({ data }) => {
             activeOpacity={0.6}
           >
             <LinearGradient
-              colors={index === 0 ? ['blue', 'blue', 'blue', 'blue'] : ['#00b4d8', '#00b4d8', '#80ed99', '#52b788']}
+              colors={index === 0 ? ['#00b4d8', 'white', '#00b4d8', 'white'] : ['#00b4d8', '#00b4d8', '#80ed99', '#52b788']}
               style={{ borderRadius: 70, padding: 3, marginRight: 8 }}
             >
-              <SurfImage source={{ uri: item.image }} />
+              <SurfImage resizeMode={index === 0 ? 'center' : 'cover'} source={{ uri: item.image }} />
             </LinearGradient>
+
             <StoriesUserName>{item.name}</StoriesUserName>
           </StoriesContainer>
         )}

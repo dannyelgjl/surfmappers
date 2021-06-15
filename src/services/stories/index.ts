@@ -1,7 +1,7 @@
 export const dataStories = [
   {
     id: 1,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeHXgdBjCSbTxTQ_mScBB_ktxO4t7aq33lgw&usqp=CAU',
+    image: 'https://i.ibb.co/55ddHy5/camera.png',
     name: 'Adicionar',
   },
   {
