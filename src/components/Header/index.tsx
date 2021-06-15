@@ -1,5 +1,5 @@
 import React from 'react';
-import logoSurf from '../../assets/images/surf1.jpeg';
+import logoSurf from '../../assets/images/surfmapperslogo.png';
 import Cart from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 

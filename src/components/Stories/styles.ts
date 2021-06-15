@@ -3,24 +3,28 @@ import { s, vs, ms, mvs } from 'react-native-size-matters';
 //  mvs espacamento e s dimensional
 // font's - ms
 
+interface ThemeProps {
+  theme: boolean;
+}
+
 export const Container = styled.View`
-  width: ${mvs(100)}%;
-  padding: ${mvs(14)}px 0 ${mvs(20)}px ${mvs(14)}px;
-  border-bottom-color: #ccc;
-  border-bottom-width: ${mvs(1)}px;
+  flex-direction: row;
+  width: 100%;
+  padding: ${mvs(14)}px ${mvs(2)}px ${mvs(20)}px ${mvs(6)}px;
+  border-bottom-color: #f3f3f3;
+  border-bottom-width: ${mvs(1.7)}px;
 `
 export const StoriesContainer = styled.TouchableOpacity`
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 `
 export const SurfImage = styled.Image`
   align-items: center;
   justify-content: center;
-  border-radius: ${mvs(75)}px;
-  height: ${mvs(70)}px;
-  width: ${mvs(70)}px;
+  border-radius: 35px;
+  height: 75px;
+  width: 75px;
 `;
 
 export const StoriesUserName = styled.Text`

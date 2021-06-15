@@ -7,7 +7,6 @@ import { dataFeed } from '../../services/feed';
 import { Container, Content } from './styles';
 
 const Home: React.FC = () => {
-  console.log(dataFeed);
   return (
     <Container>
       <Header />

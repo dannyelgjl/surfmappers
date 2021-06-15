@@ -13,15 +13,15 @@ const Stories: React.FC<Data> = ({ data }) => {
         showsHorizontalScrollIndicator={false}
         data={data}
         keyExtractor={item => String(item.id)}
-        renderItem={({ item }) => (
+        renderItem={({ item, index }) => (
           <StoriesContainer
             activeOpacity={0.6}
           >
             <LinearGradient
-              colors={['#00b4d8', '#00b4d8', '#80ed99', '#52b788']}
+              colors={index === 0 ? ['blue', 'blue', 'blue', 'blue'] : ['#00b4d8', '#00b4d8', '#80ed99', '#52b788']}
               style={{ borderRadius: 70, padding: 3, marginRight: 8 }}
             >
-              <SurfImage source={item.image} />
+              <SurfImage source={{ uri: item.image }} />
             </LinearGradient>
             <StoriesUserName>{item.name}</StoriesUserName>
           </StoriesContainer>

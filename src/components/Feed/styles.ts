@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.TouchableOpacity`
+export const Container = styled.View`
   width: 100%;
   justify-content: space-between;
   height: 260px;
@@ -21,17 +21,18 @@ export const ContentContainer = styled.View`
 `;
 
 export const Location = styled.Text`
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
-  color: #3a86ff;
+  color: #0e89ff;
 `;
 
 export const Schedule = styled.Text`
   font-size: 15px;
-  color: #000;
+  color: #414141;
 `;
 
-export const Teste = styled.View`
+export const ContainerMenu = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  padding: 4px 0;
 `;

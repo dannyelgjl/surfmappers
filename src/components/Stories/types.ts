@@ -1,6 +1,6 @@
 export interface Data {
   data: {
-    id: string;
+    id: number;
     image: string;
     name: string;
   }[],
