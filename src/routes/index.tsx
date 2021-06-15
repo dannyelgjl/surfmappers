@@ -16,7 +16,6 @@ export default function App() {
           width: 40,
           height: 40,
           borderRadius: 20,
-          backgroundColor: 'rgba(92, 90, 91, 0.7)',
           alignItems: 'center',
           marginLeft: 10,
           marginTop: 8,

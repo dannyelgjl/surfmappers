@@ -9,8 +9,8 @@ import Routes from './routes';
 
 const App: React.FC = () => (
   <NavigationContainer>
-    <StatusBar barStyle="light-content" backgroundColor="#000" />
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+    <StatusBar barStyle="light-content" />
+    <SafeAreaView style={{ flex: 1 }}>
       <Routes />
     </SafeAreaView>
   </NavigationContainer>

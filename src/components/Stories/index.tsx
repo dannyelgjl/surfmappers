@@ -1,17 +1,9 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-
+import { Data } from './types';
 import { Container, SurfImage, StoriesContainer, StoriesUserName } from './styles';
 
-
-interface Data {
-  data: {
-    id: number;
-    image: string;
-    name: string;
-  }[],
-}
 
 const Stories: React.FC<Data> = ({ data }) => {
   return (
@@ -20,7 +12,7 @@ const Stories: React.FC<Data> = ({ data }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={data}
-        keyExtractor={item => item.id}
+        keyExtractor={item => String(item.id)}
         renderItem={({ item }) => (
           <StoriesContainer
             activeOpacity={0.6}
