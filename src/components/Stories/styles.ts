@@ -22,9 +22,9 @@ export const StoriesContainer = styled.TouchableOpacity`
 export const SurfImage = styled.Image`
   align-items: center;
   justify-content: center;
-  border-radius: 35px;
-  height: 75px;
-  width: 75px;
+  border-radius: 33px;
+  height: 65px;
+  width: 65px;
 `;
 
 export const StoriesUserName = styled.Text`

@@ -19,7 +19,7 @@ const Stories: React.FC<Data> = ({ data }) => {
           >
             <LinearGradient
               colors={index === 0 ? ['#00b4d8', 'white', '#00b4d8', 'white'] : ['#00b4d8', '#00b4d8', '#80ed99', '#52b788']}
-              style={{ borderRadius: 70, padding: 3, marginRight: 8 }}
+              style={{ borderRadius: 70, padding: 2, marginRight: 8 }}
             >
               <SurfImage resizeMode={index === 0 ? 'center' : 'cover'} source={{ uri: item.image }} />
             </LinearGradient>

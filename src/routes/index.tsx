@@ -1,51 +1,71 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SCREENS } from './constants/route-name';
-import { Home } from '../pages';
+import { Home, Explore, Checking, Notification, Profile } from '../pages';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Feather from 'react-native-vector-icons/Feather';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const StackNavigation = createStackNavigator();
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <StackNavigation.Navigator
-      screenOptions={{
-        headerTransparent: true,
-        headerTitle: '',
-        headerTintColor: 'white',
-        headerLeftContainerStyle: {
-          width: 40,
-          height: 40,
-          borderRadius: 20,
-          alignItems: 'center',
-          marginLeft: 10,
-          marginTop: 8,
-        },
-        cardStyleInterpolator: ({ index, current, next, layouts: { screen } }) => {
-          const translateX = current.progress.interpolate({
-            inputRange: [index - 1, index, index + 1],
-            outputRange: [screen.width, 0, 0],
-          });
-
-          const opacity = next?.progress.interpolate({
-            inputRange: [0, 1, 2],
-            outputRange: [1, 0, 0],
-          });
-
-          return {
-            cardStyle: {
-              opacity,
-              transform: [{ translateX }],
-              backgroundColor: '#ffffff3d'
-            }
-          };
-        },
+    <Tab.Navigator
+      initialRouteName={SCREENS.HOME}
+      tabBarOptions={{
+        activeTintColor: '#0e89ff'
       }}
     >
-      <StackNavigation.Screen
-        options={{ headerShown: false }}
+      <Tab.Screen
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: () => (
+            <AntDesign name="home" color="#0e89ff" size={20} />
+          ),
+        }}
         name={SCREENS.HOME}
-        component={Home}
-      />
-    </StackNavigation.Navigator>
+        component={Home} />
+
+      <Tab.Screen
+        options={{
+          tabBarLabel: 'Explorar',
+          tabBarIcon: () => (
+            <AntDesign name="search1" color="#0e89ff" size={20} />
+          ),
+        }}
+        name={SCREENS.EXPLORE}
+        component={Explore} />
+
+      <Tab.Screen
+        options={{
+          tabBarLabel: 'Checkin',
+          tabBarIcon: () => (
+            <Feather name="map-pin" color="#0e89ff" size={20} />
+          ),
+        }}
+        name={SCREENS.NOTIFICATION}
+        component={Notification} />
+
+      <Tab.Screen
+        options={{
+          tabBarLabel: 'Notificações',
+          tabBarIcon: () => (
+            <MaterialIcons name="notifications-none" color="#0e89ff" size={20} />
+          ),
+        }}
+        name={SCREENS.CHECKING}
+        component={Checking} />
+
+      <Tab.Screen
+        options={{
+          tabBarLabel: 'Perfil',
+          tabBarIcon: () => (
+            <Feather name="users" color="#0e89ff" size={20} />
+          ),
+        }}
+        name={SCREENS.PROFILE}
+        component={Profile} />
+    </Tab.Navigator>
   );
 }
