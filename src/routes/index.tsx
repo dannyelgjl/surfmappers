@@ -1,6 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SCREENS } from './constants/route-name';
+import { ICONS } from './constants/icons-name';
+import { LABEL } from './constants/label-name';
+import { theme } from '../styles/colors/theme';
 import { Home, Explore, Checking, Notification, Profile } from '../pages';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
@@ -14,14 +17,14 @@ export default function App() {
     <Tab.Navigator
       initialRouteName={SCREENS.HOME}
       tabBarOptions={{
-        activeTintColor: '#0e89ff'
+        activeTintColor: `${theme.colors.defaultBlue}`,
       }}
     >
       <Tab.Screen
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: `${LABEL.HOME}`,
           tabBarIcon: () => (
-            <AntDesign name="home" color="#0e89ff" size={20} />
+            <AntDesign name={ICONS.HOME} color={theme.colors.defaultBlue} size={20} />
           ),
         }}
         name={SCREENS.HOME}
@@ -29,9 +32,9 @@ export default function App() {
 
       <Tab.Screen
         options={{
-          tabBarLabel: 'Explorar',
+          tabBarLabel: `${LABEL.EXPLORE}`,
           tabBarIcon: () => (
-            <AntDesign name="search1" color="#0e89ff" size={20} />
+            <AntDesign name={ICONS.SEARCH} color={theme.colors.defaultBlue} size={20} />
           ),
         }}
         name={SCREENS.EXPLORE}
@@ -39,9 +42,9 @@ export default function App() {
 
       <Tab.Screen
         options={{
-          tabBarLabel: 'Checkin',
+          tabBarLabel: `${LABEL.CHECKIN}`,
           tabBarIcon: () => (
-            <Feather name="map-pin" color="#0e89ff" size={20} />
+            <Feather name={ICONS.MAP_PIN} color={theme.colors.defaultBlue} size={20} />
           ),
         }}
         name={SCREENS.NOTIFICATION}
@@ -49,9 +52,9 @@ export default function App() {
 
       <Tab.Screen
         options={{
-          tabBarLabel: 'Notificações',
+          tabBarLabel: `${LABEL.NOTIFICATION}`,
           tabBarIcon: () => (
-            <MaterialIcons name="notifications-none" color="#0e89ff" size={20} />
+            <MaterialIcons name={ICONS.NOTIFICATION} color={theme.colors.defaultBlue} size={20} />
           ),
         }}
         name={SCREENS.CHECKING}
@@ -59,9 +62,9 @@ export default function App() {
 
       <Tab.Screen
         options={{
-          tabBarLabel: 'Perfil',
+          tabBarLabel: `${LABEL.PROFILE}`,
           tabBarIcon: () => (
-            <Feather name="users" color="#0e89ff" size={20} />
+            <Feather name={ICONS.USERS} color={theme.colors.defaultBlue} size={20} />
           ),
         }}
         name={SCREENS.PROFILE}

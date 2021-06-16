@@ -1,38 +1,40 @@
 import styled from 'styled-components/native';
+import { mvs, s } from 'react-native-size-matters';
+import { theme } from '../../styles/colors/theme';
 
 export const Container = styled.View`
   width: 100%;
   justify-content: space-between;
-  height: 260px;
-  margin: 10px 0 8px 0;
-  border-radius: 10px;
+  height: ${mvs(260)}px ;
+  margin: ${mvs(10)}px 0 ${mvs(8)}px 0;
+  border-radius: ${mvs(10)}px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: ${theme.colors.white};
 `;
 
 export const ImageFeed = styled.Image`
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
+  height: ${mvs(200)}px;
+  border-radius: ${mvs(10)}px;
 `;
 
 export const ContentContainer = styled.View`
-  padding: 6px 2px;
+  padding: ${mvs(6)}px ${mvs(2)}px;
 `;
 
 export const Location = styled.Text`
-  font-size: 17px;
+  font-size: ${s(14)}px;
   font-weight: bold;
-  color: #0e89ff;
+  color: ${theme.colors.defaultBlue};
 `;
 
 export const Schedule = styled.Text`
-  font-size: 15px;
-  color: #414141;
+  font-size: ${s(12)}px;
+  color: ${theme.colors.gray2};
 `;
 
 export const ContainerMenu = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  padding: 4px 0;
+  padding: ${mvs(4)}px 0;
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { mvs } from 'react-native-size-matters';
 
 interface StylesProps {
   space?: boolean;
@@ -7,13 +8,13 @@ interface StylesProps {
 export const Container = styled.View`
   flex-direction: row;
   width: 100%;
-  padding: 20px;
+  padding: ${mvs(20)}px;
   justify-content: space-between;
 `;
 
 export const Logo = styled.Image`
-  height: 40px;
-  width: 180px;
+  height: ${mvs(40)}px;
+  width: ${mvs(180)}px;
 `;
 
 export const IconContainer = styled.View`
@@ -21,5 +22,5 @@ export const IconContainer = styled.View`
 `;
 
 export const IconButton = styled.TouchableOpacity<StylesProps>`
-  margin-right: ${({ space }) => space ? "28px" : "0"};
+  margin-right: ${({ space }) => space ? `${mvs(28)}px` : "0"};
 `;

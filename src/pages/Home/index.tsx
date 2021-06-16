@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Header, Stories, Title, InputForm, Feed } from '../../components';
 import { STRINGS } from './strings';
 import { dataStories } from '../../services/stories';

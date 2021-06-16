@@ -2,8 +2,8 @@
 import React from 'react';
 import { FlatList, View, TouchableOpacity } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
-import { DataFeedProps } from './types'
-
+import { DataFeedProps } from './types';
+import { STRINGS } from './strings';
 import { Container, ImageFeed, ContentContainer, Location, Schedule, ContainerMenu } from './styles';
 
 
@@ -26,7 +26,7 @@ const Feed: React.FC<DataFeedProps> = ({ data }) => {
                   {item.schedule}
                 </Schedule>
                 <TouchableOpacity>
-                  <Entypo name="dots-three-vertical" size={20} />
+                  <Entypo name={STRINGS.ICON_MENU} size={20} />
                 </TouchableOpacity>
               </ContainerMenu>
 
